@@ -38,10 +38,10 @@ def test_inventory_system():
     
     print("\n--- Test 3: Search Product ---")
     search_results = manager.inventory[
-        manager.inventory['Product_Name'].str.contains('Mouse', case=False, na=False)
+        manager.inventory['Product_Name'].str.contains('Gun', case=False, na=False)
     ]
-    manager.search_product('Mouse')
-    assert len(search_results) == 1, f"Expected 1 result for 'Mouse', got {len(search_results)}"
+    manager.search_product('Gun')
+    assert len(search_results) == 1, f"Expected 1 result for 'Gun', got {len(search_results)}"
     test_results.append(("Search Product", True))
     print(f"Search test: PASSED (found 1 product)\n")
     
